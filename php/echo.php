@@ -1,10 +1,14 @@
 <?php
 
-function echo()
+function echoTest()
 {
-  // ...
+	
+	foreach(func_get_args() as $next) {
+		echo $next."<br>";
+	}
+
 }
 
-echo();
-echo('bla');
-echo('foo', 'bar', 'baz');
+echoTest();
+echoTest('bla');
+echoTest('foo', 'bar', 'baz');
